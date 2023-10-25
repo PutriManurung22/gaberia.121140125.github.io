@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Halaman Formulir</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="stylee.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pendaftaran Lomba UI/UX Teknik Informatika ITERA</h1>
+      <img src="logo.svg" alt="Logo Website" height="200" width="400" />
+    </header>
+    <div class="body">
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="Index.html">Halaman Utama</a></li>
+            <li><a href="Formulir.html">Halaman Formulir</a></li>
+            <li><a href="Tabel.html">Halaman Tabel</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <h2>Formulir Pendaftaran</h2>
+        <form action="Html2.html" method="get">
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required /><br />
+
+          <label for="nim">NIM:</label>
+          <input type="text" id="nim" name="nim" required /><br />
+
+          <label for="program_studi">Program Studi:</label>
+          <input type="text" id="program_studi" name="program_studi" required /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required /><br />
+
+          <label for="gender">Jenis Kelamin:</label>
+          <div class="radio-container">
+            <input type="radio" id="gender" name="gender" value="Pria" required>
+            <label for="gender">Pria</label>
+            <input type="radio" id="gender" name="gender" value="Wanita" required>
+            <label for="gender">Wanita</label>
+          </div>
+
+          <label for="tanggal_lahir">Tanggal Lahir:</label>
+          <input type="date" id="tanggal_lahir" name="tanggal_lahir" required /><br />
+
+          <label for="alamat">Alamat:</label>
+          <textarea id="alamat" name="alamat" required></textarea><br />
+
+          <input type="submit" value="Daftar" />
+        </form>
+        <label for="terms">Saya setuju dengan <a href="" target="_blank">Syarat dan Ketentuan pada Halaman Utama</a></label>
+        <input type="checkbox" id="terms" name="terms" required>
+      </main>
+    </div>
+    <footer>
+      <p>&copy;2023 Gaberia Sinaga, Hak cipta dilindungi.</p>
+    </footer>
+  </body>
+</html>

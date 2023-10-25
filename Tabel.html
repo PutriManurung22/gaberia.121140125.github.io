@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Halaman Tabel</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="stylee.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pendaftaran Lomba UI/UX Teknik Informatika ITERA</h1>
+      <img src="logo.svg" alt="Logo Website" height="200" width="400" />
+    </header>
+    <div class="body">
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="Index.html">Halaman Utama</a></li>
+            <li><a href="Formulir.html">Halaman Formulir</a></li>
+            <li><a href="Tabel.html">Halaman Tabel</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <h2>Daftar Mahasiswa Yang Mendaftar Lomba</h2>
+        <table id="data-table">
+          <tr>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Program Studi</th>
+            <th>Email</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+          </tr>
+          <tr>
+            <td>Gaberia Sinaga</td>
+            <td>121140125</td>
+            <td>Teknik Informatika</td>
+            <td>sgaberia@gmail.com</td>
+            <td>Wanita</td>
+            <td>2004-03-10</td>
+            <td>Sukarame</td>
+          </tr>
+          <tr>
+            <td>Vebie Yoseva</td>
+            <td>121140016</td>
+            <td>Teknik Informatika</td>
+            <td>vebie@gmail.com</td>
+            <td>Wanita</td>
+            <td>2004-01-24</td>
+            <td>Way Huwi</td>
+          </tr>
+          <tr>
+            <td>Putri Naftali Manurung</td>
+            <td>121140027</td>
+            <td>Teknik Informatika</td>
+            <td>putri@gmail.com</td>
+            <td>Wanita</td>
+            <td>2002-10-22</td>
+            <td>Way Huwi</td>
+          </tr>
+          <tr>
+            <td>Antonius Munthe</td>
+            <td>121140032</td>
+            <td>Teknik Informatika</td>
+            <td>antonius@gmail.com</td>
+            <td>Pria</td>
+            <td>2003-03-14</td>
+            <td>Way Huwi</td>
+          </tr>
+          <tr>
+            <td>Elisabet Nandra</td>
+            <td>121140101</td>
+            <td>Teknik Informatika</td>
+            <td>elisabet@gmail.com</td>
+            <td>Wanita</td>
+            <td>2003-04-24</td>
+            <td>Way Huwi</td>
+          </tr>
+        </table>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2023 Gaberia Sinaga, Hak cipta dilindungi.</p>
+    </footer>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("nama")) {
+        const nama = urlParams.get("nama");
+        const nim = urlParams.get("nim");
+        const programStudi = urlParams.get("program_studi");
+        const email = urlParams.get("email");
+        const jenisKelamin = urlParams.get("jenis_kelamin");
+        const tanggalLahir = urlParams.get("tanggal_lahir");
+        const alamat = urlParams.get("alamat");
+
+        const dataTable = document.getElementById("data-table");
+
+        const newRow = dataTable.insertRow(1);
+
+        const namaCell = newRow.insertCell(0);
+        const nimCell = newRow.insertCell(1);
+        const prodiCell = newRow.insertCell(2);
+        const emailCell = newRow.insertCell(3);
+        const jenisKelaminCell = newRow.insertCell(4);
+        const tglLahirCell = newRow.insertCell(5);
+        const alamatCell = newRow.insertCell(6);
+
+        namaCell.innerHTML = nama;
+        nimCell.innerHTML = nim;
+        prodiCell.innerHTML = programStudi;
+        emailCell.innerHTML = email;
+        jenisKelaminCell.innerHTML = jenisKelamin;
+        tglLahirCell.innerHTML = tanggalLahir;
+        alamatCell.innerHTML = alamat;
+      }
+    </script>
+  </body>
+</html>
